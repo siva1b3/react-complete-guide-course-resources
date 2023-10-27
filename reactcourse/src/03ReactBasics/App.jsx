@@ -3,7 +3,10 @@ import React from "react";
 // import App02 from "./02CreateFirstComponent/App";
 // import App03 from "./03OutputtingDynamicValues/App";
 // import App04 from "./04MakeComponentsResuableWithProps/App";
-import App05 from "./05AlterNatewaytoProps/App";
+// import App05 from "./05AlterNatewaytoProps/App";
+// import App06 from "./06BestPracticesReactModularize/App";
+// import App07 from "./07AddingStylesNextToComponent/App";
+import App08 from "./08ChildrenPropofComponent/App";
 
 export default function App() {
   return (
@@ -21,7 +24,16 @@ export default function App() {
       {/* <App04 /> */}
 
       {/* alter nagateway to props */}
-      <App05 />
+      {/* <App05 /> */}
+
+      {/* best practices react modularize code */}
+      {/* <App06 /> */}
+
+      {/* adding styles in react */}
+      {/* <App07 /> */}
+
+      {/* children props of component */}
+      <App08 />
     </>
   );
 }

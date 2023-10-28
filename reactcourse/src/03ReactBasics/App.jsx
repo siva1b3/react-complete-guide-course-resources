@@ -6,7 +6,8 @@ import React from "react";
 // import App05 from "./05AlterNatewaytoProps/App";
 // import App06 from "./06BestPracticesReactModularize/App";
 // import App07 from "./07AddingStylesNextToComponent/App";
-import App08 from "./08ChildrenPropofComponent/App";
+// import App08 from "./08ChildrenPropofComponent/App";
+import App09 from "./09ReactingToEvents/App";
 
 export default function App() {
   return (
@@ -33,7 +34,10 @@ export default function App() {
       {/* <App07 /> */}
 
       {/* children props of component */}
-      <App08 />
+      {/* <App08 /> */}
+
+      {/* reacting to events */}
+      <App09 />
     </>
   );
 }

@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-bind */
 /* eslint-disable react/jsx-props-no-spreading */
 import React from "react";
 import "./index.css";
@@ -15,6 +16,10 @@ function genRandomInt(max) {
 
 function App() {
   const description = reactDescriptions[genRandomInt(2)];
+
+  function ClickHandler() {
+    console.log("hello world!");
+  }
 
   return (
     <div>
@@ -40,10 +45,10 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton>Components</TabButton>
-            <TabButton>JSX</TabButton>
-            <TabButton>Props</TabButton>
-            <TabButton>State</TabButton>
+            <TabButton onClick={ClickHandler}>Components</TabButton>
+            <TabButton onClick={ClickHandler}>JSX</TabButton>
+            <TabButton onClick={ClickHandler}>Props</TabButton>
+            <TabButton onClick={ClickHandler}>State</TabButton>
           </menu>
         </section>
       </main>

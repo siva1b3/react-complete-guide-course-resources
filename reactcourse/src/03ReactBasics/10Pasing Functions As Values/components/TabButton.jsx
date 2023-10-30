@@ -2,11 +2,7 @@
 import React from "react";
 
 function TabButton(props) {
-  const { children } = props;
-
-  function clickHandler() {
-    console.log(`hello world! From ${children}`);
-  }
+  const { children, onClick: clickHandler } = props;
 
   return (
     <li>

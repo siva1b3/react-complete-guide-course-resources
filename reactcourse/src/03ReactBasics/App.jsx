@@ -7,7 +7,8 @@ import React from "react";
 // import App06 from "./06BestPracticesReactModularize/App";
 // import App07 from "./07AddingStylesNextToComponent/App";
 // import App08 from "./08ChildrenPropofComponent/App";
-import App09 from "./09ReactingToEvents/App";
+// import App09 from "./09ReactingToEvents/App";
+import App10 from "./10Pasing Functions As Values/App";
 
 export default function App() {
   return (
@@ -37,7 +38,10 @@ export default function App() {
       {/* <App08 /> */}
 
       {/* reacting to events */}
-      <App09 />
+      {/* <App09 /> */}
+
+      {/* passing functions as values */}
+      <App10 />
     </>
   );
 }

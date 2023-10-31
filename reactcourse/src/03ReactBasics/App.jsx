@@ -10,7 +10,9 @@ import React from "react";
 // import App09 from "./09ReactingToEvents/App";
 // import App10 from "./10Pasing Functions In props/App";
 // import App11 from "./11Pasing Functions With Arguments Preferred Way/App";
-import App12 from "./12 How Not To Update UI/App";
+// import App12 from "./12 How Not To Update UI/App";
+// import App13 from "./13 Managaing State Using Hooks/App";
+import App14 from "./14 Deriving & Outputting Data Based on State/App";
 
 export default function App() {
   return (
@@ -49,7 +51,13 @@ export default function App() {
       {/* <App11 /> */}
 
       {/* how not to update UI in react */}
-      <App12 />
+      {/* <App12 /> */}
+
+      {/* managing state using hooks */}
+      {/* <App13 /> */}
+
+      {/* deriving and output based on state */}
+      <App14 />
     </>
   );
 }

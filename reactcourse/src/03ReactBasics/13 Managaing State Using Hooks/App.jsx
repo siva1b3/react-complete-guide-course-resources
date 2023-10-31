@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from "react";
+import React, { useState } from "react";
 import "./index.css";
 import Header from "./components/Header/Header";
 import CoreConcept from "./components/CoreConcept";
@@ -14,14 +14,13 @@ function genRandomInt(max) {
 }
 
 function App() {
+  const [selectedTopic, setSelectedTopic] = useState("Please click a button");
   const description = reactDescriptions[genRandomInt(2)];
-
-  let tabContent = "Please click a button";
 
   function selectHandler(selectedButton) {
     console.log(`hello world! ${selectedButton}`);
-    tabContent = selectedButton;
-    console.log(tabContent);
+    setSelectedTopic(selectedButton);
+    console.log(selectedTopic);
   }
 
   console.log("APP COMPOMENT R$ENDERING");
@@ -58,7 +57,7 @@ function App() {
             <TabButton onSelect={() => selectHandler("State")}>State</TabButton>
           </menu>
           <div>
-            <h3>{tabContent}</h3>
+            <h3>{selectedTopic}</h3>
           </div>
         </section>
       </main>

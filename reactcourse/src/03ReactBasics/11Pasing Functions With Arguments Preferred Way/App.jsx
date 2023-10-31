@@ -17,8 +17,8 @@ function genRandomInt(max) {
 function App() {
   const description = reactDescriptions[genRandomInt(2)];
 
-  function ClickHandler() {
-    console.log("hello world!");
+  function selectHandler(selectedButton) {
+    console.log(`hello world! ${selectedButton}`);
   }
 
   return (
@@ -45,10 +45,12 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton onClick={ClickHandler}>Components</TabButton>
-            <TabButton onClick={ClickHandler}>JSX</TabButton>
-            <TabButton onClick={ClickHandler}>Props</TabButton>
-            <TabButton onClick={ClickHandler}>State</TabButton>
+            <TabButton onSelect={() => selectHandler("Components")}>
+              Components
+            </TabButton>
+            <TabButton onSelect={() => selectHandler("JSX")}>JSX</TabButton>
+            <TabButton onSelect={() => selectHandler("Props")}>Props</TabButton>
+            <TabButton onSelect={() => selectHandler("State")}>State</TabButton>
           </menu>
         </section>
       </main>

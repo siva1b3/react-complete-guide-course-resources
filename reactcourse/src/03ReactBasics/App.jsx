@@ -8,7 +8,9 @@ import React from "react";
 // import App07 from "./07AddingStylesNextToComponent/App";
 // import App08 from "./08ChildrenPropofComponent/App";
 // import App09 from "./09ReactingToEvents/App";
-import App10 from "./10Pasing Functions As Values/App";
+// import App10 from "./10Pasing Functions In props/App";
+// import App11 from "./11Pasing Functions With Arguments Preferred Way/App";
+import App12 from "./12 How Not To Update UI/App";
 
 export default function App() {
   return (
@@ -40,8 +42,14 @@ export default function App() {
       {/* reacting to events */}
       {/* <App09 /> */}
 
-      {/* passing functions as values */}
-      <App10 />
+      {/* passing functions as props */}
+      {/* <App10 /> */}
+
+      {/* passing functions as props and getting values */}
+      {/* <App11 /> */}
+
+      {/* how not to update UI in react */}
+      <App12 />
     </>
   );
 }

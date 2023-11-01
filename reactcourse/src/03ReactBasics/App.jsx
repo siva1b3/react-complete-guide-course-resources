@@ -12,7 +12,11 @@ import React from "react";
 // import App11 from "./11Pasing Functions With Arguments Preferred Way/App";
 // import App12 from "./12 How Not To Update UI/App";
 // import App13 from "./13 Managaing State Using Hooks/App";
-import App14 from "./14 Deriving & Outputting Data Based on State/App";
+// import App14 from "./14 Deriving & Outputting Data Based on State/App";
+// import App15 from "./15 Conditional Rendering/App";
+// import App16 from "./16 Conditional Rendering Alternative/App";
+// import App17 from "./17 CSS Styling dynamically/App";
+import App18 from "./18 Outputting List Data Dynamically/App";
 
 export default function App() {
   return (
@@ -57,7 +61,19 @@ export default function App() {
       {/* <App13 /> */}
 
       {/* deriving and output based on state */}
-      <App14 />
+      {/* <App14 /> */}
+
+      {/* conditional rendering */}
+      {/* <App15 /> */}
+
+      {/* conditional rendering alternative using variables */}
+      {/* <App16 /> */}
+
+      {/* css styling dynamically */}
+      {/* <App17 /> */}
+
+      {/* outputting list data dynamically */}
+      <App18 />
     </>
   );
 }

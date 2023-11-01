@@ -14,9 +14,7 @@ function genRandomInt(max) {
 }
 
 function App() {
-  const [selectedTopic, setSelectedTopic] = useState(
-    CORE_CONCEPTS[0].title.toLowerCase()
-  );
+  const [selectedTopic, setSelectedTopic] = useState();
   const description = reactDescriptions[genRandomInt(2)];
 
   function selectHandler(selectedButton) {
@@ -58,13 +56,17 @@ function App() {
             <TabButton onSelect={() => selectHandler("Props")}>Props</TabButton>
             <TabButton onSelect={() => selectHandler("State")}>State</TabButton>
           </menu>
-          <div id="tab-content">
-            <h3>{EXAMPLES[selectedTopic].title}</h3>
-            <p>{EXAMPLES[selectedTopic].description}</p>
-            <pre>
-              <code>{EXAMPLES[selectedTopic].code}</code>
-            </pre>
-          </div>
+          {!selectedTopic ? (
+            <p>please select a topic</p>
+          ) : (
+            <div id="tab-content">
+              <h3>{EXAMPLES[selectedTopic].title}</h3>
+              <p>{EXAMPLES[selectedTopic].description}</p>
+              <pre>
+                <code>{EXAMPLES[selectedTopic].code}</code>
+              </pre>
+            </div>
+          )}
         </section>
       </main>
     </div>

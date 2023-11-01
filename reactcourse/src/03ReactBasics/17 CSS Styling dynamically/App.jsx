@@ -14,10 +14,8 @@ function genRandomInt(max) {
 }
 
 function App() {
-  const [selectedTopic, setSelectedTopic] = useState(
-    CORE_CONCEPTS[0].title.toLowerCase()
-  );
   const description = reactDescriptions[genRandomInt(2)];
+  const [selectedTopic, setSelectedTopic] = useState();
 
   function selectHandler(selectedButton) {
     console.log(`hello world! ${selectedButton}`);
@@ -26,6 +24,20 @@ function App() {
   }
 
   console.log("APP COMPOMENT R$ENDERING");
+
+  let tabContent = <p>please select a topic</p>;
+
+  if (selectedTopic) {
+    tabContent = (
+      <div id="tab-content">
+        <h3>{EXAMPLES[selectedTopic].title}</h3>
+        <p>{EXAMPLES[selectedTopic].description}</p>
+        <pre>
+          <code>{EXAMPLES[selectedTopic].code}</code>
+        </pre>
+      </div>
+    );
+  }
 
   return (
     <div>
@@ -51,20 +63,32 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton onSelect={() => selectHandler("Components")}>
+            <TabButton
+              isSelected={selectedTopic === "Components".toLowerCase()}
+              onSelect={() => selectHandler("Components")}
+            >
               Components
             </TabButton>
-            <TabButton onSelect={() => selectHandler("JSX")}>JSX</TabButton>
-            <TabButton onSelect={() => selectHandler("Props")}>Props</TabButton>
-            <TabButton onSelect={() => selectHandler("State")}>State</TabButton>
+            <TabButton
+              isSelected={selectedTopic === "JSX".toLowerCase()}
+              onSelect={() => selectHandler("JSX")}
+            >
+              JSX
+            </TabButton>
+            <TabButton
+              isSelected={selectedTopic === "Props".toLowerCase()}
+              onSelect={() => selectHandler("Props")}
+            >
+              Props
+            </TabButton>
+            <TabButton
+              isSelected={selectedTopic === "State".toLowerCase()}
+              onSelect={() => selectHandler("State")}
+            >
+              State
+            </TabButton>
           </menu>
-          <div id="tab-content">
-            <h3>{EXAMPLES[selectedTopic].title}</h3>
-            <p>{EXAMPLES[selectedTopic].description}</p>
-            <pre>
-              <code>{EXAMPLES[selectedTopic].code}</code>
-            </pre>
-          </div>
+          {tabContent}
         </section>
       </main>
     </div>

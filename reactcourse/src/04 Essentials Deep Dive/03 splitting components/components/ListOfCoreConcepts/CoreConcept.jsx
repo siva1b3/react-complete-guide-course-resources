@@ -1,4 +1,5 @@
 import React from "react";
+import "./CoreConcepts.css";
 
 export default function CoreConcept({ image, title, description }) {
   return (

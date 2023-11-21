@@ -8,6 +8,7 @@ function App() {
       {/* react basics part 1 */}
       {/* <App03 /> */}
 
+      {/* Essentials deep dive */}
       <App04 />
     </div>
   );

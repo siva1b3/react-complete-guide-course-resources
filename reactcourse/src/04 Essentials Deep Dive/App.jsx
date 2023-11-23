@@ -4,7 +4,9 @@ import React from "react";
 // import App02 from "./02 Fragments/App";
 // import App0301 from "./03-01 splitting components by me/App";
 // import App0302 from "./03-02 splitting components As per video/App";
-import App04 from "./04 NiceToHave PassPropsToChildAutomatically/App";
+// import App04 from "./04 NiceToHave PassPropsToChildAutomatically FrowadingPropsPattren/App";
+import App05 from "./05 CreatingMutipleJSXSlots - Pass JSx As Props/App";
+// import App06 from "./06 PassingDynamicHtmlTagAsProp/App";
 
 function App() {
   return (
@@ -24,7 +26,14 @@ function App() {
       {/* Nice to have option */}
       {/* Send props from parents to child Automatically */}
       {/* but preferred not to use it */}
-      <App04 />
+      {/* Also called props Forwading PAttren */}
+      {/* <App04 /> */}
+
+      {/* Createing Mutiple JSX slots */}
+      {/* over the top of default children slot */}
+      {/* by passing JSX as props */}
+      {/* Yes it is possible to pass jsx as props */}
+      <App05 />
     </>
   );
 }

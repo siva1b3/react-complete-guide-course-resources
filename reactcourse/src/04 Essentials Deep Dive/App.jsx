@@ -5,8 +5,10 @@ import React from "react";
 // import App0301 from "./03-01 splitting components by me/App";
 // import App0302 from "./03-02 splitting components As per video/App";
 // import App04 from "./04 NiceToHave PassPropsToChildAutomatically FrowadingPropsPattren/App";
-import App05 from "./05 CreatingMutipleJSXSlots - Pass JSx As Props/App";
+// import App05 from "./05 CreatingMutipleJSXSlots - Pass JSx As Props/App";
 // import App06 from "./06 PassingDynamicHtmlTagAsProp/App";
+// import App07 from "./07 SetDefaultProps/App";
+import App08 from "./08 Tick-Tack-Toe Game Starter/src/App";
 
 function App() {
   return (
@@ -33,7 +35,17 @@ function App() {
       {/* over the top of default children slot */}
       {/* by passing JSX as props */}
       {/* Yes it is possible to pass jsx as props */}
-      <App05 />
+      {/* <App05 /> */}
+
+      {/* Passing Dynamic HTML tag as prop */}
+      {/* <App06 /> */}
+
+      {/* Set default props */}
+      {/* will be used if no prop was passed */}
+      {/* <App07 /> */}
+
+      {/* tic tack toe game */}
+      <App08 />
     </>
   );
 }

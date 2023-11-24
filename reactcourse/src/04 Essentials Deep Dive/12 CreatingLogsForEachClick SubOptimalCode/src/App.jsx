@@ -1,19 +1,35 @@
+/* eslint-disable react/jsx-curly-newline */
 /* eslint-disable no-confusing-arrow */
 /* eslint-disable implicit-arrow-linebreak */
 import React, { useState } from "react";
 import Header from "./components/Header";
 import Player from "./components/Player";
 import GameBoard from "./components/GameBoard";
+import Log from "./components/Log";
 
 import "./index.css";
 
+const initailLog = ["Palyer moves logged here"];
+
 function App() {
   const [activePlayerSymbol, setActivePlayerSymbol] = useState("X");
+  const [log, setLog] = useState(initailLog);
 
-  function changePlayerSymbol() {
+  function Logger(rowIndex, columnIndex) {
+    setLog((latestStateOfLog) => {
+      const logCopy = [...latestStateOfLog];
+      logCopy.push(
+        `Player ${activePlayerSymbol} selects row ${rowIndex} and column ${columnIndex}`
+      );
+      return logCopy;
+    });
+  }
+
+  function changePlayerSymbol(rowIndex, columnIndex) {
     setActivePlayerSymbol((latestStateOfSymbol) =>
       latestStateOfSymbol === "X" ? "O" : "X"
     );
+    Logger(rowIndex, columnIndex);
   }
 
   return (
@@ -34,10 +50,12 @@ function App() {
         </ol>
         <GameBoard
           activePlayerSymbol={activePlayerSymbol}
-          changePlayerSymbol={() => changePlayerSymbol()}
+          changePlayerSymbol={(rowIndex, columnIndex) =>
+            changePlayerSymbol(rowIndex, columnIndex)
+          }
         />
       </div>
-      LOG
+      <Log log={log} />
     </main>
   );
 }

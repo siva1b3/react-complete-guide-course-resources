@@ -19,7 +19,7 @@ function GameBoard({ changePlayerSymbol, activePlayerSymbol }) {
       console.log(latestGameBoardCopy);
       return latestGameBoardCopy;
     });
-    changePlayerSymbol();
+    changePlayerSymbol(rowIndex, columnIndex);
   }
 
   return (

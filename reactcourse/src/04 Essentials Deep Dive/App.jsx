@@ -9,7 +9,8 @@ import React from "react";
 // import App06 from "./06 PassingDynamicHtmlTagAsProp/App";
 // import App07 from "./07 SetDefaultProps/App";
 // import App08 from "./08 TicTacToe HeaderPlayerTabs/src/App";
-import App09 from "./09 BestWayToUpdateStateIn HeaderPlayerTabs/src/App";
+// import App09 from "./09 BestWayToUpdateStateIn HeaderPlayerTabs/src/App";
+import App10 from "./10 MutiDimensinalLists Rendering GameBoardTab/src/App";
 
 function App() {
   return (
@@ -51,7 +52,12 @@ function App() {
 
       {/* best way to update state using react */}
       {/* in player and header component */}
-      <App09 />
+      {/* Suggested by official react docs */}
+      {/* <App09 /> */}
+
+      {/* Creating the game board using */}
+      {/* MultiDimensinal arrays */}
+      <App10 />
     </>
   );
 }

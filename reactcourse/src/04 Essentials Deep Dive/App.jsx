@@ -8,7 +8,8 @@ import React from "react";
 // import App05 from "./05 CreatingMutipleJSXSlots - Pass JSx As Props/App";
 // import App06 from "./06 PassingDynamicHtmlTagAsProp/App";
 // import App07 from "./07 SetDefaultProps/App";
-import App08 from "./08 Tick-Tack-Toe Game Starter/src/App";
+// import App08 from "./08 TicTacToe HeaderPlayerTabs/src/App";
+import App09 from "./09 BestWayToUpdateStateIn HeaderPlayerTabs/src/App";
 
 function App() {
   return (
@@ -45,7 +46,12 @@ function App() {
       {/* <App07 /> */}
 
       {/* tic tack toe game */}
-      <App08 />
+      {/* Create the player and Header in React */}
+      {/* <App08 /> */}
+
+      {/* best way to update state using react */}
+      {/* in player and header component */}
+      <App09 />
     </>
   );
 }

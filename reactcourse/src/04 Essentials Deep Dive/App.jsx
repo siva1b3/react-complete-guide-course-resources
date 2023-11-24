@@ -10,7 +10,9 @@ import React from "react";
 // import App07 from "./07 SetDefaultProps/App";
 // import App08 from "./08 TicTacToe HeaderPlayerTabs/src/App";
 // import App09 from "./09 BestWayToUpdateStateIn HeaderPlayerTabs/src/App";
-import App10 from "./10 MutiDimensinalLists Rendering GameBoardTab/src/App";
+// import App10 from "./10 MutiDimensinalLists Rendering GameBoardTab/src/App";
+// import App11 from "./11 LifitingStateUp/src/App";
+import App12 from "./12 CreatingLogsForEachClick SubOptimalCode/src/App";
 
 function App() {
   return (
@@ -57,7 +59,16 @@ function App() {
 
       {/* Creating the game board using */}
       {/* MultiDimensinal arrays */}
-      <App10 />
+      {/* <App10 /> */}
+
+      {/* lifiting state up */}
+      {/* Sending the state from one component to other using */}
+      {/* common anseestor of the components */}
+      {/* <App11 /> */}
+
+      {/* Writing sub-optimal code */}
+      {/* creating logs for the clicks */}
+      <App12 />
     </>
   );
 }

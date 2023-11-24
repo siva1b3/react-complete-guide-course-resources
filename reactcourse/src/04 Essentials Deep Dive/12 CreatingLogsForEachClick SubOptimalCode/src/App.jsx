@@ -19,7 +19,9 @@ function App() {
     setLog((latestStateOfLog) => {
       const logCopy = [...latestStateOfLog];
       logCopy.push(
-        `Player ${activePlayerSymbol} selects row ${rowIndex} and column ${columnIndex}`
+        `Player ${activePlayerSymbol} selects row ${rowIndex + 1} and column ${
+          columnIndex + 1
+        }`
       );
       return logCopy;
     });
@@ -55,7 +57,7 @@ function App() {
           }
         />
       </div>
-      <Log log={log} />
+      <Log log={log} initailLog={initailLog} />
     </main>
   );
 }

@@ -12,7 +12,8 @@ import React from "react";
 // import App09 from "./09 BestWayToUpdateStateIn HeaderPlayerTabs/src/App";
 // import App10 from "./10 MutiDimensinalLists Rendering GameBoardTab/src/App";
 // import App11 from "./11 LifitingStateUp/src/App";
-import App12 from "./12 CreatingLogsForEachClick SubOptimalCode/src/App";
+// import App1201 from "./12-01 CreatingLogsForEachClick SubOptimalCode CreatedByMe/src/App";
+import App1202 from "./12-02 AvoidIntersectiongStates CreatingLogsForEachClick/src/App";
 
 function App() {
   return (
@@ -68,7 +69,15 @@ function App() {
 
       {/* Writing sub-optimal code */}
       {/* creating logs for the clicks */}
-      <App12 />
+      {/* my way of code wtitten using two useState lines */}
+      {/* this was later told as wrong */}
+      {/* we need to Avoid intersection of states */}
+      {/* <App1201 /> */}
+
+      {/* Avoid intersection of states */}
+      {/* AS per udemy to log clicks */}
+      {/* by using only one state */}
+      <App1202 />
     </>
   );
 }

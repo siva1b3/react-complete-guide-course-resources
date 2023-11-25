@@ -16,7 +16,6 @@ function GameBoard({ changePlayerSymbol, activePlayerSymbol }) {
         ...latestStateOfGameBoard.map((innerArray) => [...innerArray]),
       ];
       latestGameBoardCopy[rowIndex][columnIndex] = activePlayerSymbol;
-      console.log(latestGameBoardCopy);
       return latestGameBoardCopy;
     });
     changePlayerSymbol(rowIndex, columnIndex);

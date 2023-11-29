@@ -13,7 +13,8 @@ import React from "react";
 // import App10 from "./10 MutiDimensinalLists Rendering GameBoardTab/src/App";
 // import App11 from "./11 LifitingStateUp/src/App";
 // import App1201 from "./12-01 CreatingLogsForEachClick SubOptimalCode CreatedByMe/src/App";
-import App1202 from "./12-02 AvoidIntersectiongStates CreatingLogsForEachClick/src/App";
+// import App1202 from "./12-02 AvoidIntersectiongStates CreatingLogsForEachClick/src/App";
+import App1203 from "./12-03 udemyPerVideo CreatingLogsForClicks WithOneState/src/App";
 
 function App() {
   return (
@@ -75,9 +76,14 @@ function App() {
       {/* <App1201 /> */}
 
       {/* Avoid intersection of states */}
-      {/* AS per udemy to log clicks */}
       {/* by using only one state */}
-      <App1202 />
+      {/* my try */}
+      {/* <App1202 /> */}
+
+      {/* Creating logs for clicks */}
+      {/* As per udemy video */}
+      {/* using only one state */}
+      <App1203 />
     </>
   );
 }

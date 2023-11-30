@@ -1,43 +1,73 @@
-/* eslint-disable no-confusing-arrow */
+/* eslint-disable react/jsx-curly-newline */
 /* eslint-disable implicit-arrow-linebreak */
+/* eslint-disable operator-linebreak */
+/* eslint-disable no-shadow */
 import React, { useState } from "react";
 import Header from "./components/Header";
 import Player from "./components/Player";
 import GameBoard from "./components/GameBoard";
+import Log from "./components/Log";
 
 import "./index.css";
 
 function App() {
-  const [activePlayerSymbol, setActivePlayerSymbol] = useState("X");
+  const [gameTurns, setGameTurns] = useState([]);
 
-  function changePlayerSymbol() {
-    setActivePlayerSymbol((latestStateOfSymbol) =>
-      latestStateOfSymbol === "X" ? "O" : "X"
-    );
+  // ! never UPDATE -- Never Never UPADTE
+  // ^ Global Variable in Function Scope IN stateUpadte function
+  // * we can use Global Variable IN stateUpadte function
+  // ? but That's All we can use Global Variable IN stateUpadte function
+  let currentPlayer = "X";
+
+  if (gameTurns.length > 0 && gameTurns[0].player === "X") {
+    currentPlayer = "O";
   }
+
+  function changePlayerSymbol(rowIndex, columnIndex) {
+    setGameTurns((latestStateOfGameTurns) => {
+      const UpdatedStateOfGameTurns = [
+        { square: { row: rowIndex, col: columnIndex }, player: currentPlayer },
+        ...latestStateOfGameTurns,
+      ];
+
+      return UpdatedStateOfGameTurns;
+    });
+  }
+
+  const displayPlayersComponets = (
+    <ol id="players" className="highlight-player">
+      <Player
+        initialName="Player 1"
+        symbol="X"
+        isActive={currentPlayer === "X"}
+      />
+      <Player
+        initialName="Player 2"
+        symbol="O"
+        isActive={currentPlayer === "O"}
+      />
+    </ol>
+  );
+
+  const diplayGameBoardComponent = (
+    <GameBoard
+      changePlayerSymbol={(rowIndex, columnIndex) =>
+        changePlayerSymbol(rowIndex, columnIndex)
+      }
+      turns={gameTurns}
+    />
+  );
+
+  const displayLogsForEachMove = <Log turns={gameTurns} />;
 
   return (
     <main>
       <Header />
       <div id="game-container">
-        <ol id="players" className="highlight-player">
-          <Player
-            initialName="Player 1"
-            symbol="X"
-            isActive={activePlayerSymbol === "X"}
-          />
-          <Player
-            initialName="Player 2"
-            symbol="O"
-            isActive={activePlayerSymbol === "O"}
-          />
-        </ol>
-        <GameBoard
-          activePlayerSymbol={activePlayerSymbol}
-          changePlayerSymbol={() => changePlayerSymbol()}
-        />
+        {displayPlayersComponets}
+        {diplayGameBoardComponent}
       </div>
-      LOG
+      {displayLogsForEachMove}
     </main>
   );
 }

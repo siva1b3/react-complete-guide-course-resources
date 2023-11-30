@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+/* eslint-disable react/jsx-curly-newline */
+/* eslint-disable implicit-arrow-linebreak */
+import React from "react";
 import { v4 as uuid } from "uuid";
 
 const initialGameBoard = [
@@ -7,41 +9,46 @@ const initialGameBoard = [
   [null, null, null],
 ];
 
-function GameBoard({ changePlayerSymbol, activePlayerSymbol }) {
-  const [gameBoard, setGameBoard] = useState(initialGameBoard);
+function GameBoard({ changePlayerSymbol, turns, symbol: currentPlayer }) {
+  const gameBoard = initialGameBoard;
 
-  function handleGameBoardClick(rowIndex, columnIndex) {
-    setGameBoard((latestStateOfGameBoard) => {
-      const latestGameBoardCopy = [
-        ...latestStateOfGameBoard.map((innerArray) => [...innerArray]),
-      ];
-      latestGameBoardCopy[rowIndex][columnIndex] = activePlayerSymbol;
-      console.log(latestGameBoardCopy);
-      return latestGameBoardCopy;
-    });
-    changePlayerSymbol();
+  turns.forEach((turn) => {
+    const { square, player } = turn;
+    const { row, col } = square;
+    gameBoard[row][col] = player;
+  });
+
+  function eachBoxOfGameBoard(columnIndex, rowIndex, elementInRow) {
+    return (
+      <li key={uuid()}>
+        <button
+          type="button"
+          onClick={() =>
+            changePlayerSymbol(rowIndex, columnIndex, currentPlayer)
+          }
+        >
+          {elementInRow}
+        </button>
+      </li>
+    );
   }
 
-  return (
-    <ol id="game-board">
-      {gameBoard.map((row, rowIndex) => (
-        <li key={uuid()}>
-          <ol>
-            {row.map((playerSymbol, columnIndex) => (
-              <li key={uuid()}>
-                <button
-                  type="button"
-                  onClick={() => handleGameBoardClick(rowIndex, columnIndex)}
-                >
-                  {playerSymbol}
-                </button>
-              </li>
-            ))}
-          </ol>
-        </li>
-      ))}
-    </ol>
-  );
+  function eachLineOfGameBoard(row, rowIndex) {
+    return (
+      <ol>
+        {row.map((elementInRow, columnIndex) =>
+          // eslint-disable-next-line implicit-arrow-linebreak
+          eachBoxOfGameBoard(columnIndex, rowIndex, elementInRow)
+        )}
+      </ol>
+    );
+  }
+
+  const displayGameBoard = gameBoard.map((row, rowIndex) => (
+    <li key={uuid()}>{eachLineOfGameBoard(row, rowIndex)}</li>
+  ));
+
+  return <ol id="game-board">{displayGameBoard}</ol>;
 }
 
 export default GameBoard;

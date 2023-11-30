@@ -16,7 +16,9 @@ import React from "react";
 // import App1201 from "./12-01 CreatingLogsForEachClick SubOptimalCode CreatedByMe/src/App";
 // import App1202 from "./12-02 AvoidIntersectiongStates CreatingLogsForEachClick/src/App";
 // import App120301 from "./12-03-01 udemyPerVideo important Upadting App With One State AlterNate01/src/App";
-import App120302 from "./12-03-02 udemyPerVideo important Upadting App With One State AlterNate02/src/App";
+// import App120302 from "./12-03-02 udemyPerVideo important Upadting App With One State AlterNate02/src/App";
+// import App13 from "./13 disablingButtonsConditinally/src/App";
+import App14 from "./14 Out Sourcing data ToSeperateFile/src/App";
 
 function App() {
   return (
@@ -90,7 +92,13 @@ function App() {
       {/* As per udemy video */}
       {/* using only one state */}
       {/* Aletrnative 02 may be useful */}
-      <App120302 />
+      {/* <App120302 /> */}
+
+      {/* disabling buttons consitionally */}
+      {/* <App13 /> */}
+
+      {/* outSourcing data to new file */}
+      <App14 />
     </>
   );
 }

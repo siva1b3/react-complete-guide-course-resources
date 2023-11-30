@@ -10,6 +10,16 @@ import Log from "./components/Log";
 
 import "./index.css";
 
+function getActivePlayerSymbol(gameTurns) {
+  let currentPlayer = "X";
+
+  if (gameTurns.length > 0 && gameTurns[0].player === "X") {
+    currentPlayer = "O";
+  }
+
+  return currentPlayer;
+}
+
 function App() {
   const [gameTurns, setGameTurns] = useState([]);
 
@@ -17,16 +27,14 @@ function App() {
   // ^ Global Variable in Function Scope IN stateUpadte function
   // * we can use Global Variable IN stateUpadte function
   // ? but That's All we can use Global Variable IN stateUpadte function
-  let currentPlayer = "X";
-
-  if (gameTurns.length > 0 && gameTurns[0].player === "X") {
-    currentPlayer = "O";
-  }
+  const currentPlayer = getActivePlayerSymbol(gameTurns);
 
   function changePlayerSymbol(rowIndex, columnIndex) {
     setGameTurns((latestStateOfGameTurns) => {
+      const playerSymbol = getActivePlayerSymbol(latestStateOfGameTurns);
+
       const UpdatedStateOfGameTurns = [
-        { square: { row: rowIndex, col: columnIndex }, player: currentPlayer },
+        { square: { row: rowIndex, col: columnIndex }, player: playerSymbol },
         ...latestStateOfGameTurns,
       ];
 

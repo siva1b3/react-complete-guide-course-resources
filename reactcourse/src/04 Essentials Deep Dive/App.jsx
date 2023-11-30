@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from "react";
 
 // import App01 from "./01-starting-project/App";
@@ -14,7 +15,8 @@ import React from "react";
 // import App11 from "./11 LifitingStateUp/src/App";
 // import App1201 from "./12-01 CreatingLogsForEachClick SubOptimalCode CreatedByMe/src/App";
 // import App1202 from "./12-02 AvoidIntersectiongStates CreatingLogsForEachClick/src/App";
-import App1203 from "./12-03 udemyPerVideo CreatingLogsForClicks WithOneState/src/App";
+// import App120301 from "./12-03-01 udemyPerVideo important Upadting App With One State AlterNate01/src/App";
+import App120302 from "./12-03-02 udemyPerVideo important Upadting App With One State AlterNate02/src/App";
 
 function App() {
   return (
@@ -80,10 +82,15 @@ function App() {
       {/* my try */}
       {/* <App1202 /> */}
 
-      {/* Creating logs for clicks */}
       {/* As per udemy video */}
       {/* using only one state */}
-      <App1203 />
+      {/* Aletrnative 01 important and useful */}
+      {/* <App120301 /> */}
+
+      {/* As per udemy video */}
+      {/* using only one state */}
+      {/* Aletrnative 02 may be useful */}
+      <App120302 />
     </>
   );
 }

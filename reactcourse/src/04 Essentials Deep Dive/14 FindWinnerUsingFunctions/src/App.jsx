@@ -1,33 +1,22 @@
 /* eslint-disable react/jsx-curly-newline */
 /* eslint-disable implicit-arrow-linebreak */
-/* eslint-disable operator-linebreak */
-/* eslint-disable no-shadow */
 import React, { useState } from "react";
 import Header from "./components/Header";
 import Player from "./components/Player";
 import GameBoard from "./components/GameBoard";
 import Log from "./components/Log";
+import { WINNING_COMBINATIONS } from "./winning-combinations";
+import { getActivePlayerSymbol, checkForWinner } from "./util";
 
 import "./index.css";
-
-function getActivePlayerSymbol(gameTurns) {
-  let currentPlayer = "X";
-
-  if (gameTurns.length > 0 && gameTurns[0].player === "X") {
-    currentPlayer = "O";
-  }
-
-  return currentPlayer;
-}
 
 function App() {
   const [gameTurns, setGameTurns] = useState([]);
 
-  // ! never UPDATE -- Never Never UPADTE
-  // ^ Global Variable in Function Scope IN stateUpadte function
-  // * we can use Global Variable IN stateUpadte function
-  // ? but That's All we can use Global Variable IN stateUpadte function
   const currentPlayer = getActivePlayerSymbol(gameTurns);
+
+  const winnerData = checkForWinner(WINNING_COMBINATIONS, gameTurns);
+  console.dir(winnerData);
 
   function changePlayerSymbol(rowIndex, columnIndex) {
     setGameTurns((latestStateOfGameTurns) => {

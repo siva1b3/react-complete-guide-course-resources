@@ -3,13 +3,12 @@
 import React from "react";
 import { v4 as uuid } from "uuid";
 
-const initialGameBoard = [
-  [null, null, null],
-  [null, null, null],
-  [null, null, null],
-];
-
-function GameBoard({ changePlayerSymbol, turns, symbol: currentPlayer }) {
+function GameBoard({
+  changePlayerSymbol,
+  initialGameBoard,
+  turns,
+  symbol: currentPlayer,
+}) {
   const gameBoard = initialGameBoard;
 
   turns.forEach((turn) => {

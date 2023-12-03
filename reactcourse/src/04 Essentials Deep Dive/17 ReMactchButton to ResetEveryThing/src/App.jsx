@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 /* eslint-disable operator-linebreak */
 /* eslint-disable react/jsx-curly-newline */
 /* eslint-disable implicit-arrow-linebreak */
@@ -12,9 +13,15 @@ import GameOver from "./components/GameOver";
 
 import "./index.css";
 
-const playerInitialData = [
+let playerInitialData = [
   { symbol: "X", player: "Player 1" },
   { symbol: "O", player: "Player 2" },
+];
+
+let initialGameBoard = [
+  [null, null, null],
+  [null, null, null],
+  [null, null, null],
 ];
 
 function App() {
@@ -45,6 +52,19 @@ function App() {
     });
   }
 
+  function reMatchButtonClick() {
+    setGameTurns([]);
+    playerInitialData = [
+      { symbol: "X", player: "Player 1" },
+      { symbol: "O", player: "Player 2" },
+    ];
+    initialGameBoard = [
+      [null, null, null],
+      [null, null, null],
+      [null, null, null],
+    ];
+  }
+
   const displayPlayersComponets = (
     <ol id="players" className="highlight-player">
       <Player
@@ -68,6 +88,7 @@ function App() {
 
   const diplayGameBoardComponent = (
     <GameBoard
+      initialGameBoard={initialGameBoard}
       changePlayerSymbol={(rowIndex, columnIndex) =>
         changePlayerSymbol(rowIndex, columnIndex)
       }
@@ -83,6 +104,9 @@ function App() {
       hasWinner={winnerData.hasWinner}
       playerData={playerInitialData}
       isGametie={winnerData.isGametie}
+      reMatchButtonClick={() => {
+        reMatchButtonClick();
+      }}
     />
   );
 

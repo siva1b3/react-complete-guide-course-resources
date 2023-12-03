@@ -77,19 +77,22 @@ function App() {
 
   const displayLogsForEachMove = <Log turns={gameTurns} />;
 
+  const displayGameOverBoard = (
+    <GameOver
+      winnerSymbol={winnerData.winnerInfo.player}
+      hasWinner={winnerData.hasWinner}
+      playerData={playerInitialData}
+      isGametie={winnerData.isGametie}
+    />
+  );
+
   return (
     <main>
       <Header />
       <div id="game-container">
         {displayPlayersComponets}
-        {(winnerData.hasWinner || winnerData.isGametie) && (
-          <GameOver
-            winnerSymbol={winnerData.winnerInfo.player}
-            hasWinner={winnerData.hasWinner}
-            playerData={playerInitialData}
-            isGametie={winnerData.isGametie}
-          />
-        )}
+        {(winnerData.hasWinner === true || winnerData.isGametie === true) &&
+          displayGameOverBoard}
         {diplayGameBoardComponent}
       </div>
       {displayLogsForEachMove}

@@ -20,7 +20,8 @@ import React from "react";
 // import App13 from "./13 disablingButtonsConditinally/src/App";
 // import App1401 from "./14-01 IMPORATNT FindWinnerUsingFunctions myMethod/src/App";
 // import App1402 from "./14-02 checkForTheWinnerAsPerVideo Not Complete Not Important/src/App";
-import App15 from "./15 GameOverScreen/src/App";
+// import App15 from "./15 GameOverScreen/src/App";
+import App16 from "./16 Fetch players Names on GameOverScreen/src/App";
 
 function App() {
   return (
@@ -111,7 +112,10 @@ function App() {
       {/* <App1402 /> */}
 
       {/* Adding game over screen */}
-      <App15 />
+      {/* <App15 /> */}
+
+      {/* getting players names from player component */}
+      <App16 />
     </>
   );
 }

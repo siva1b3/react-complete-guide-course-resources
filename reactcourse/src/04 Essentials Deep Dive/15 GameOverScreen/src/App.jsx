@@ -64,7 +64,11 @@ function App() {
       <div id="game-container">
         {displayPlayersComponets}
         {(winnerData.hasWinner || winnerData.isGametie) && (
-          <GameOver winner={winnerData.winnerInfo.player} />
+          <GameOver
+            winner={winnerData.winnerInfo.player}
+            hasWinner={winnerData.hasWinner}
+            isGametie={winnerData.isGametie}
+          />
         )}
         {diplayGameBoardComponent}
       </div>

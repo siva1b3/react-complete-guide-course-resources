@@ -1,7 +1,5 @@
 /* eslint-disable react/jsx-curly-newline */
 /* eslint-disable implicit-arrow-linebreak */
-/* eslint-disable operator-linebreak */
-/* eslint-disable no-shadow */
 import React, { useState } from "react";
 import Header from "./components/Header";
 import Player from "./components/Player";

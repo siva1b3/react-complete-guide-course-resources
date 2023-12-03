@@ -19,7 +19,8 @@ import React from "react";
 // import App120302 from "./12-03-02 udemyPerVideo important Upadting App With One State AlterNate02/src/App";
 // import App13 from "./13 disablingButtonsConditinally/src/App";
 // import App1401 from "./14-01 IMPORATNT FindWinnerUsingFunctions myMethod/src/App";
-import App1402 from "./14-02 checkForTheWinnerAsPerVideo/src/App";
+// import App1402 from "./14-02 checkForTheWinnerAsPerVideo Not Complete Not Important/src/App";
+import App15 from "./15 GameOverScreen/src/App";
 
 function App() {
   return (
@@ -103,8 +104,14 @@ function App() {
       {/* My method using ChatGpt and small functions */}
       {/* <App1401 /> */}
 
-      {/* Check for winner as per youtube video */}
-      <App1402 />
+      {/* Check for winner as per video */}
+      {/* Not completed not important  */}
+      {/* the alternative 14-01 that i created */}
+      {/* better */}
+      {/* <App1402 /> */}
+
+      {/* Adding game over screen */}
+      <App15 />
     </>
   );
 }

@@ -16,6 +16,7 @@ function App() {
       {/* Practice Project */}
       {/* <App05 /> */}
 
+      {/* Styling react components */}
       <App06 />
     </>
   );

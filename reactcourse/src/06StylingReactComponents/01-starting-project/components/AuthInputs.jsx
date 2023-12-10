@@ -1,6 +1,3 @@
-/* eslint-disable react/jsx-curly-newline */
-/* eslint-disable implicit-arrow-linebreak */
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from "react";
 
 export default function AuthInputs() {
@@ -23,36 +20,52 @@ export default function AuthInputs() {
   const emailNotValid = submitted && !enteredEmail.includes("@");
   const passwordNotValid = submitted && enteredPassword.trim().length < 6;
 
+  const emailInputJSX = (
+    <label htmlFor="email">
+      <p>Email:</p>
+      <input
+        type="email"
+        id="email"
+        className={emailNotValid ? "invalid" : undefined}
+        aria-labelledby="email"
+        onChange={(event) => handleInputChange("email", event.target.value)}
+      />
+    </label>
+  );
+
+  const passwordInputJSX = (
+    <label htmlFor="password">
+      <p>Password</p>
+      <input
+        id="password"
+        type="password"
+        className={passwordNotValid ? "invalid" : undefined}
+        onChange={(event) => handleInputChange("password", event.target.value)}
+      />
+    </label>
+  );
+
+  const createNewAccountJSX = (
+    <button type="button" className="text-button">
+      Create a new account
+    </button>
+  );
+
+  const signInButtonJSX = (
+    <button type="button" className="button" onClick={handleLogin}>
+      Sign In
+    </button>
+  );
+
   return (
     <div id="auth-inputs">
       <div className="controls">
-        <p>
-          <label>Email</label>
-          <input
-            type="email"
-            className={emailNotValid ? "invalid" : undefined}
-            onChange={(event) => handleInputChange("email", event.target.value)}
-          />
-        </p>
-        <p>
-          <label htmlFor="password">Password</label>
-          <input
-            id="password"
-            type="password"
-            className={passwordNotValid ? "invalid" : undefined}
-            onChange={(event) =>
-              handleInputChange("password", event.target.value)
-            }
-          />
-        </p>
+        <p>{emailInputJSX}</p>
+        <p>{passwordInputJSX}</p>
       </div>
       <div className="actions">
-        <button type="button" className="text-button">
-          Create a new account
-        </button>
-        <button type="button" className="button" onClick={handleLogin}>
-          Sign In
-        </button>
+        {createNewAccountJSX}
+        {signInButtonJSX}
       </div>
     </div>
   );

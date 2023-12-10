@@ -6,7 +6,8 @@ import React from "react";
 // import App05 from "./05 Scoping CSS Modules in React/App";
 // import App06 from "./06 StyledComponets CSS-IN-JSX/App";
 // import App07 from "./07 Conditially styledComponets/App";
-import App08 from "./08 Pseudo Selectors, Nested Rules & Media Queries/App";
+// import App08 from "./08 Pseudo Selectors, Nested Rules & Media Queries/App";
+import App09 from "./09 Creating Reusable Components & Component Combinations/App";
 
 function App() {
   return (
@@ -37,7 +38,10 @@ function App() {
 
       {/* Pseudo Selectors, Nested Rules & Media Queries */}
       {/* in styled componets */}
-      <App08 />
+      {/* <App08 /> */}
+
+      {/* Creating Reusable Components & Component Combinations */}
+      <App09 />
     </>
   );
 }

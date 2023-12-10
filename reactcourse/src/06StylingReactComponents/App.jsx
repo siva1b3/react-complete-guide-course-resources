@@ -5,7 +5,8 @@ import React from "react";
 // import App04 from "./04 Dynamic & Conditional Styling with CSS Files & CSS Classes/App";
 // import App05 from "./05 Scoping CSS Modules in React/App";
 // import App06 from "./06 StyledComponets CSS-IN-JSX/App";
-import App07 from "./07 Conditially styledComponets/App";
+// import App07 from "./07 Conditially styledComponets/App";
+import App08 from "./08 Pseudo Selectors, Nested Rules & Media Queries/App";
 
 function App() {
   return (
@@ -32,7 +33,11 @@ function App() {
 
       {/* Consitinally styled */}
       {/* css componets */}
-      <App07 />
+      {/* <App07 /> */}
+
+      {/* Pseudo Selectors, Nested Rules & Media Queries */}
+      {/* in styled componets */}
+      <App08 />
     </>
   );
 }

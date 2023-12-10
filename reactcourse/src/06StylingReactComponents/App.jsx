@@ -1,11 +1,15 @@
 import React from "react";
-import App01 from "./01-starting-project/App";
+// import App01 from "./01-starting-project/App";
+import App02 from "./02 Splitting CSS Code Across Multiple Files/App";
 
 function App() {
   return (
     <>
-      {/*  */}
-      <App01 />
+      {/* Starting project */}
+      {/* <App01 /> */}
+
+      {/* Splitting css between multiple files */}
+      <App02 />
     </>
   );
 }

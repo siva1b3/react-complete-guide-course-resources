@@ -4,7 +4,8 @@ import React from "react";
 // import App03 from "./03 inlineStyles And Dynamic InlineStyles/App";
 // import App04 from "./04 Dynamic & Conditional Styling with CSS Files & CSS Classes/App";
 // import App05 from "./05 Scoping CSS Modules in React/App";
-import App06 from "./06 StyledComponets CSS-IN-JSX/App";
+// import App06 from "./06 StyledComponets CSS-IN-JSX/App";
+import App07 from "./07 Conditially styledComponets/App";
 
 function App() {
   return (
@@ -27,7 +28,11 @@ function App() {
 
       {/* CSS on JS */}
       {/* Using styled componets */}
-      <App06 />
+      {/* <App06 /> */}
+
+      {/* Consitinally styled */}
+      {/* css componets */}
+      <App07 />
     </>
   );
 }

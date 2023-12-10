@@ -1,4 +1,3 @@
-/* eslint-disable indent */
 import React, { useState } from "react";
 
 export default function AuthInputs() {
@@ -23,20 +22,11 @@ export default function AuthInputs() {
 
   const emailInputJSX = (
     <label htmlFor="email">
-      <p style={emailNotValid ? { color: "#f87171" } : undefined}>Email:</p>
+      <p>Email:</p>
       <input
         type="email"
         id="email"
-        style={
-          emailNotValid
-            ? {
-                color: "#ef4444",
-                borderColor: "#f73f3f",
-                backgroundColor: "#fed2d2",
-              }
-            : undefined
-        }
-        // className={emailNotValid ? "invalid" : undefined}
+        className={emailNotValid ? "invalid" : undefined}
         aria-labelledby="email"
         onChange={(event) => handleInputChange("email", event.target.value)}
       />
@@ -45,22 +35,11 @@ export default function AuthInputs() {
 
   const passwordInputJSX = (
     <label htmlFor="password">
-      <p style={passwordNotValid ? { color: "#f87171" } : undefined}>
-        Password
-      </p>
+      <p>Password</p>
       <input
         id="password"
         type="password"
-        style={
-          passwordNotValid
-            ? {
-                color: "#ef4444",
-                borderColor: "#f73f3f",
-                backgroundColor: "#fed2d2",
-              }
-            : undefined
-        }
-        // className={passwordNotValid ? "invalid" : undefined}
+        className={passwordNotValid ? "invalid" : undefined}
         onChange={(event) => handleInputChange("password", event.target.value)}
       />
     </label>

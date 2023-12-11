@@ -7,7 +7,8 @@ import React from "react";
 // import App06 from "./06 StyledComponets CSS-IN-JSX/App";
 // import App07 from "./07 Conditially styledComponets/App";
 // import App08 from "./08 Pseudo Selectors, Nested Rules & Media Queries/App";
-import App0901 from "./09-01 Creating Reusable Components & Component Combinations/App";
+// import App0901 from "./09-01 Creating Reusable Components & Component Combinations/App";
+import App0902 from "./09-02 Creating Reusable Components & Component Combinations as per video/App";
 
 function App() {
   return (
@@ -41,7 +42,12 @@ function App() {
       {/* <App08 /> */}
 
       {/* Creating Reusable Components & Component Combinations */}
-      <App0901 />
+      {/* as per my style */}
+      {/* <App0901 /> */}
+
+      {/* Creating Reusable Components & Component Combinations */}
+      {/* as per video */}
+      <App0902 />
     </>
   );
 }

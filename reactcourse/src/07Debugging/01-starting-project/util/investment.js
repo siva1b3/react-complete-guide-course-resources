@@ -10,7 +10,7 @@ export function calculateInvestmentResults(
   { initialInvestment, annualInvestment, expectedReturn, duration },
   results
 ) {
-  let investmentValue = initialInvestment;
+  let investmentValue = parseInt(initialInvestment, 10);
 
   for (let i = 0; i < duration; i++) {
     const interestEarnedInYear = investmentValue * (expectedReturn / 100);

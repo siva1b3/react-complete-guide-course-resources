@@ -2,9 +2,8 @@
 import React from "react";
 import { calculateInvestmentResults, formatter } from "../util/investment";
 
-const results = [];
-
 export default function Results({ input }) {
+  const results = [];
   calculateInvestmentResults(input, results);
 
   if (results.length === 0) {

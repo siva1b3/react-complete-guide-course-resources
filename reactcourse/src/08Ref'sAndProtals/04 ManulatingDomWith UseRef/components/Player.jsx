@@ -14,6 +14,9 @@ export default function PlayerComponent() {
   const handleSetName = () => {
     // Update the player name using the stored input field value
     setPlayerName(playerNameInputRef.current.value);
+    // Manupulating Dom directly in React is
+    // Not a good practice
+    playerNameInputRef.current.value = "";
   };
 
   // JSX rendering of the PlayerComponent

@@ -4,7 +4,8 @@ import React from "react";
 // import App02 from "./02 Basic UseState Example/App";
 // import App03 from "./03 UseRef Intro/App";
 // import App04 from "./04 ManulatingDomWith UseRef/App";
-import App05 from "./05 MakingChallege Page/App";
+// import App05 from "./05 MakingChallege Page/App";
+import App06 from "./06 AddingStateTo the Challenges/App";
 
 function App() {
   return (
@@ -23,7 +24,10 @@ function App() {
       {/* <App04 /> */}
 
       {/* Making the challnege timer componet */}
-      <App05 />
+      {/* <App05 /> */}
+
+      {/* Adding state to the timer */}
+      <App06 />
     </>
   );
 }

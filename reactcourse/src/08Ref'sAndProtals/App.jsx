@@ -5,7 +5,7 @@ import React from "react";
 // import App03 from "./03 UseRef Intro/App";
 // import App04 from "./04 ManulatingDomWith UseRef/App";
 // import App05 from "./05 MakingChallege Page/App";
-import App06 from "./06 AddingStateTo the Challenges/App";
+import App0601 from "./06-01 MyTrail AddingStateTo the Challenges/App";
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
       {/* <App05 /> */}
 
       {/* Adding state to the timer */}
-      <App06 />
+      <App0601 />
     </>
   );
 }

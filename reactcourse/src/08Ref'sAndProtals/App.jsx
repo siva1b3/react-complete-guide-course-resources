@@ -5,7 +5,10 @@ import React from "react";
 // import App03 from "./03 UseRef Intro/App";
 // import App04 from "./04 ManulatingDomWith UseRef/App";
 // import App05 from "./05 MakingChallege Page/App";
-import App0601 from "./06-01 MyTrail AddingStateTo the Challenges/App";
+// import App0601 from "./06-01 MyTrail AddingStateTo the Challenges/App";
+// import App0602 from "./06-02 AsPerVideo AddingStateToChallnges/App";
+// import App0701 from "./07-01 CreatingModal Element/App";
+import App0702 from "./07-02 Using RefAnd ForwardRef CreatingModal Element/App";
 
 function App() {
   return (
@@ -27,7 +30,20 @@ function App() {
       {/* <App05 /> */}
 
       {/* Adding state to the timer */}
-      <App0601 />
+      {/* My trail */}
+      {/* <App0601 /> */}
+
+      {/* Adding state to the timer */}
+      {/* As per Video */}
+      {/* <App0602 /> */}
+
+      {/* Creating Modal */}
+      {/* not using ref to work with modal */}
+      {/* <App0701 /> */}
+
+      {/* Creating Modal */}
+      {/* Uisng Ref and Forward ref to View Modal element */}
+      <App0702 />
     </>
   );
 }

@@ -8,7 +8,8 @@ import React from "react";
 // import App0601 from "./06-01 MyTrail AddingStateTo the Challenges/App";
 // import App0602 from "./06-02 AsPerVideo AddingStateToChallnges/App";
 // import App0701 from "./07-01 CreatingModal Element/App";
-import App0702 from "./07-02 Using RefAnd ForwardRef CreatingModal Element/App";
+// import App0702 from "./07-02 Using RefAnd ForwardRef CreatingModal Element/App";
+import App08 from "./08 UseuseImperativeHandleHook to make CodeMoreModular/App";
 
 function App() {
   return (
@@ -43,7 +44,10 @@ function App() {
 
       {/* Creating Modal */}
       {/* Uisng Ref and Forward ref to View Modal element */}
-      <App0702 />
+      {/* <App0702 /> */}
+
+      {/* UseuseImperativeHandleHook to make CodeMoreModular */}
+      <App08 />
     </>
   );
 }

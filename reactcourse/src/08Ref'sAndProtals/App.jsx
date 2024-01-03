@@ -9,7 +9,8 @@ import React from "react";
 // import App0602 from "./06-02 AsPerVideo AddingStateToChallnges/App";
 // import App0701 from "./07-01 CreatingModal Element/App";
 // import App0702 from "./07-02 Using RefAnd ForwardRef CreatingModal Element/App";
-import App08 from "./08 UseuseImperativeHandleHook to make CodeMoreModular/App";
+// import App08 from "./08 UseuseImperativeHandleHook to make CodeMoreModular/App";
+import App09 from "./09 My trail of Design the WebApp/App";
 
 function App() {
   return (
@@ -47,7 +48,12 @@ function App() {
       {/* <App0702 /> */}
 
       {/* UseuseImperativeHandleHook to make CodeMoreModular */}
-      <App08 />
+      {/* Expose user desfined functions to the parent from Child */}
+      {/* using the UseuseImperativeHandleHook */}
+      {/* <App08 /> */}
+
+      {/* My trail of Design the WebApp */}
+      <App09 />
     </>
   );
 }

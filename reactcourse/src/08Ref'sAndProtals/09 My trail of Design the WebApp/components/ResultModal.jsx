@@ -8,7 +8,15 @@ const ResultModal = forwardRef(({ result, targetTime }, ref) => {
     openDialog() {
       return customDialogRef.current.showModal();
     },
+    closeDialog() {
+      customDialogRef.current.close();
+    },
   };
+
+  function handleClose(event) {
+    event.preventDefault(); // Prevent the form submission and page refresh
+    customFunctions.closeDialog();
+  }
 
   useImperativeHandle(ref, () => customFunctions);
 
@@ -21,7 +29,7 @@ const ResultModal = forwardRef(({ result, targetTime }, ref) => {
       <p>
         You stopped time with <strong>x seconds left</strong>
       </p>
-      <form method="dailog">
+      <form method="dailog" onSubmit={(event) => handleClose(event)}>
         <button type="submit">Close</button>
       </form>
     </dialog>

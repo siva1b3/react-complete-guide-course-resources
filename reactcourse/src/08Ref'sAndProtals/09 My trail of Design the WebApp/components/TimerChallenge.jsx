@@ -19,6 +19,7 @@ export default function TimerChallenge({ title, targetTime }) {
   }
   function HandleStop() {
     clearTimeout(timer.current);
+    dailog.current.closeDialog();
   }
 
   return (

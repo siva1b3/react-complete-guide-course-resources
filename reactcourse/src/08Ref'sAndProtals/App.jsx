@@ -10,7 +10,7 @@ import React from "react";
 // import App0701 from "./07-01 CreatingModal Element/App";
 // import App0702 from "./07-02 Using RefAnd ForwardRef CreatingModal Element/App";
 // import App08 from "./08 UseuseImperativeHandleHook to make CodeMoreModular/App";
-import App09 from "./09 My trail of Design the WebApp/App";
+import App09 from "./09 My trail of Design the Name Input in the WebApp/App";
 
 function App() {
   return (

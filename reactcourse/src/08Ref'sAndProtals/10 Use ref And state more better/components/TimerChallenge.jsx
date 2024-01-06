@@ -5,30 +5,41 @@ import ResultModal from "./ResultModal";
 export default function TimerChallenge({ title, targetTime }) {
   const timer = useRef();
   const dailog = useRef();
-  const newStateLoadTime = useRef(10);
+  const newStateLoadTimeInMilliSeconds = 20;
   const [timerRunning, setTimmerRunning] = useState(targetTime * 1000);
 
   const isActive = timerRunning > 0 && timerRunning < targetTime * 1000;
 
+  function resetTimer() {
+    setTimmerRunning(targetTime * 1000);
+  }
+
   if (timerRunning < -1) {
     clearInterval(timer.current);
     dailog.current.openDialog();
-    setTimmerRunning(targetTime * 1000);
   }
 
   function handleStart() {
     timer.current = setInterval(() => {
-      setTimmerRunning((prevState) => prevState - newStateLoadTime.current);
-    }, targetTime * newStateLoadTime.current);
+      setTimmerRunning(
+        (prevState) => prevState - newStateLoadTimeInMilliSeconds
+      );
+    }, newStateLoadTimeInMilliSeconds);
   }
   function HandleStop() {
     clearInterval(timer.current);
-    setTimmerRunning(targetTime * 1000);
+    dailog.current.openDialog();
   }
 
   return (
     <>
-      <ResultModal targetTime={targetTime} result="Lost" ref={dailog} />
+      <ResultModal
+        targetTime={targetTime}
+        result="Lost"
+        ref={dailog}
+        remaingTime={timerRunning}
+        resetTimer={() => resetTimer()}
+      />
       <section className="challenge">
         <h2>{title}</h2>
         <p className="challenge-time">

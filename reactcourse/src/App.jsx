@@ -6,6 +6,8 @@ import React from "react";
 // import App07 from "./07Debugging/App";
 import App08 from "./08Ref'sAndProtals/App";
 
+// import FormApp from "./ReactForms/App";
+
 function App() {
   return (
     <>
@@ -26,6 +28,8 @@ function App() {
 
       {/* ref's and protals */}
       <App08 />
+
+      {/* <FormApp /> */}
     </>
   );
 }

@@ -42,7 +42,7 @@ export default function PlayerComponent() {
   const InputField =
     (isPlayerNameChangedFromDefault.current && playerNameChangeMode) ||
     !isPlayerNameChangedFromDefault.current ? (
-      <input type="text" ref={playerNameInputRef} />
+      <input id="playerName" type="text" ref={playerNameInputRef} />
     ) : (
       ""
     );

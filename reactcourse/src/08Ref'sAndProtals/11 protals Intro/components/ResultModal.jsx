@@ -1,6 +1,7 @@
 /* eslint-disable object-curly-newline */
 /* eslint-disable react/jsx-one-expression-per-line */
 import React, { forwardRef, useRef, useImperativeHandle } from "react";
+import { createPortal } from "react-dom";
 
 const ResultModal = forwardRef(
   ({ targetTime, remaingTime, resetTimer }, ref) => {
@@ -25,7 +26,7 @@ const ResultModal = forwardRef(
 
     useImperativeHandle(ref, () => customFunctions);
 
-    return (
+    return createPortal(
       <dialog
         ref={customDialogRef}
         className="result-modal"
@@ -47,7 +48,8 @@ const ResultModal = forwardRef(
         <form method="dailog" onSubmit={(event) => handleClose(event)}>
           <button type="submit">Close</button>
         </form>
-      </dialog>
+      </dialog>,
+      document.getElementById("modal1")
     );
   }
 );

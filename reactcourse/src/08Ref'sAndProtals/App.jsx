@@ -11,7 +11,8 @@ import React from "react";
 // import App0702 from "./07-02 Using RefAnd ForwardRef CreatingModal Element/App";
 // import App08 from "./08 UseuseImperativeHandleHook to make CodeMoreModular/App";
 // import App09 from "./09 My trail of Design the Name Input in the WebApp/App";
-import App10 from "./10 Use ref And state more better/App";
+// import App10 from "./10 Use ref And state more better/App";
+import App11 from "./11 protals Intro/App";
 
 function App() {
   return (
@@ -57,7 +58,10 @@ function App() {
       {/* <App09 /> */}
 
       {/* using state and ref more better */}
-      <App10 />
+      {/* <App10 /> */}
+
+      {/* Intro to protals */}
+      <App11 />
     </>
   );
 }

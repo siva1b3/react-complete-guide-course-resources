@@ -1,19 +1,24 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from "react";
+import React from "react";
 import ListofProjects from "../ListofProjects/ListofProjects";
 import "./projectViewSection.css";
 
-function ProjectViewSection() {
-  const [projectList, setProjectList] = useState();
-  function handleClick() {
-    setProjectList(true);
-  }
+function ProjectViewSection({ ProjectSelected, handleCreateProjectClick }) {
   return (
     <aside className="projectViewSection">
       <h1>Your Projects</h1>
-      <button type="button" onClick={() => handleClick()}>
-        Add Project
-      </button>
+      {ProjectSelected ? (
+        ""
+      ) : (
+        <button
+          type="button"
+          onClick={() => {
+            handleCreateProjectClick();
+          }}
+        >
+          Add Project
+        </button>
+      )}
     </aside>
   );
 }

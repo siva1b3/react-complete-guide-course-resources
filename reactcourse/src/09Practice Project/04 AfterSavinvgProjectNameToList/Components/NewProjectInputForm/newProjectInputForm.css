@@ -1,0 +1,45 @@
+.newProjectInputForm {
+  background-color: rgb(66, 160, 222);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+}
+
+.cancelSaveButtons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 10px;
+}
+
+.cancelSaveButtons button {
+  margin: 10px;
+  padding: 10px;
+  font-size: larger;
+  background-color: black;
+  color: antiquewhite;
+  transition: all 0.2s;
+}
+
+.cancelSaveButtons button:hover {
+  background-color: aqua;
+  color: brown;
+}
+
+.newProjectInputForm label {
+  margin: 20px;
+}
+
+.newProjectInputForm .label {
+  text-transform: uppercase;
+  background-color: bisque;
+}
+
+.newProjectInputForm .input input {
+  width: 95%;
+  height: 80px;
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import NoProjectSelected from "../NoProjectSelected/NoProjectSelected";
-import NewProjectInputForm from "../NewProjectInputForm/NewProjectInputForm";
+import ValidateForm from "../ValidateForm/ValidateForm";
 import "./displayProjectSection.css";
 
 function DisplayProjectSection({
@@ -12,7 +12,7 @@ function DisplayProjectSection({
   return (
     <section className="displayProjectSection">
       {ProjectSelected ? (
-        <NewProjectInputForm
+        <ValidateForm
           handleSaveNewproject={(value) => handleSaveNewproject(value)}
           handleCancelNewProjectClick={() => handleCancelNewProjectClick()}
         />

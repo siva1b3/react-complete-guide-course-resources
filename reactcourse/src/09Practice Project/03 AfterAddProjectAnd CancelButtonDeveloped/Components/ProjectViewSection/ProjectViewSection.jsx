@@ -3,7 +3,13 @@ import React from "react";
 import ListofProjects from "../ListofProjects/ListofProjects";
 import "./projectViewSection.css";
 
-function ProjectViewSection({ ProjectSelected, handleCreateProjectClick }) {
+function ProjectViewSection({
+  ProjectSelected,
+  handleCreateProjectClick,
+  SaveNewProject,
+}) {
+  const projectList = [...SaveNewProject];
+  projectList.shift();
   return (
     <aside className="projectViewSection">
       <h1>Your Projects</h1>
@@ -18,6 +24,11 @@ function ProjectViewSection({ ProjectSelected, handleCreateProjectClick }) {
         >
           Add Project
         </button>
+      )}
+      {SaveNewProject.length > 0 ? (
+        <ListofProjects projectList={projectList} />
+      ) : (
+        ""
       )}
     </aside>
   );

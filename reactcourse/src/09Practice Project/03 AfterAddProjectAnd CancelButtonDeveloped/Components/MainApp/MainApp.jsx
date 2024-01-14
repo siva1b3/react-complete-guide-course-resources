@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable no-confusing-arrow */
 /* eslint-disable implicit-arrow-linebreak */
 import React, { useState } from "react";
@@ -9,7 +8,13 @@ import "./mainApp.css";
 
 function MainApp() {
   const [ProjectSelected, setProjectSelected] = useState(false);
-  const [SaveNewProject, setSaveNewProject] = useState([]);
+  const [SaveNewProject, setSaveNewProject] = useState([
+    {
+      description: "",
+      dueDate: "",
+      projectName: "",
+    },
+  ]);
   function handleCreateProjectClick() {
     if (ProjectSelected === false) {
       setProjectSelected(true);
@@ -25,18 +30,24 @@ function MainApp() {
   }
 
   function handleSaveNewproject(value) {
-    console.log(value);
-    // setSaveNewProject((latestStateOfProjectList) => {
-    //   const list = latestStateOfProjectList;
-    //   return list.push(value);
-    // });
+    setSaveNewProject((latestStateOfProjectList) => {
+      const newList = [...latestStateOfProjectList, value];
+      return newList;
+    });
+    setProjectSelected((latestStateOfProjectSelected) =>
+      latestStateOfProjectSelected === true
+        ? false
+        : latestStateOfProjectSelected
+    );
   }
 
+  console.log(SaveNewProject);
   return (
     <div className="app">
       <ProjectViewSection
         ProjectSelected={ProjectSelected}
         handleCreateProjectClick={() => handleCreateProjectClick()}
+        SaveNewProject={SaveNewProject}
       />
       <DisplayProjectSection
         handleSaveNewproject={(value) => handleSaveNewproject(value)}

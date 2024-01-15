@@ -1,0 +1,38 @@
+.noProjectSelected {
+  background-color: bisque;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.noProjectSelected img {
+  height: 250px;
+  width: 250px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.noProjectSelected button {
+  height: 60px;
+  width: fit-content;
+  margin: 20px;
+  padding: 0% 20px 0%;
+  font-size: large;
+  background-color: black;
+  color: aliceblue;
+  transition: background-color 0.3s ease-in-out, color 0.3s;
+}
+
+.noProjectSelected button:hover {
+  background-color: yellow;
+  color: red;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.noProjectSelected p {
+  font-weight: bold;
+  font-size: large;
+}

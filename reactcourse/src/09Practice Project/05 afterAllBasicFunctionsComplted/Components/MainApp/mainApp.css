@@ -1,0 +1,18 @@
+.app {
+  height: 100vh; /* Set the height of the container to 100% of the viewport height */
+  width: 100vw;
+  background-color: #80bcbd;
+  display: flex;
+  padding: 15px;
+  padding-top: 30px;
+  box-sizing: border-box;
+}
+
+.app .projectViewSection {
+  width: 28%;
+}
+
+.app .displayProjectSection,
+.app .showIndividualProject {
+  width: 72%;
+}

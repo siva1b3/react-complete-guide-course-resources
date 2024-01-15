@@ -1,21 +1,28 @@
-/* eslint-disable array-callback-return */
 import React from "react";
-import { v4 as uuid } from "uuid";
 import "./listofProjects.css";
 
-function ListofProjects({ projectList }) {
+function ListofProjects({ projectList, projectButtonClickHandle }) {
+  function handleProjectSelectClick(value) {
+    projectButtonClickHandle(value);
+  }
+
   return (
     <div className="listofProjects">
       {projectList.length > 0 ? (
-        <ul className="projectList">
+        <ol type="1" className="projectList">
           {projectList.map((element) => (
-            <li key={uuid()}>
-              <button type="button">{element.projectName}</button>
+            <li key={`project_${element.id}`}>
+              <button
+                type="button"
+                onClick={() => handleProjectSelectClick(element.id)}
+              >
+                {element.projectName}
+              </button>
             </li>
           ))}
-        </ul>
+        </ol>
       ) : (
-        ""
+        <p>No projects available.</p>
       )}
     </div>
   );

@@ -12,6 +12,7 @@
   width: 28%;
 }
 
-.app .displayProjectSection {
+.app .displayProjectSection,
+.app .showIndividualProject {
   width: 72%;
 }

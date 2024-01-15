@@ -5,7 +5,8 @@ import React from "react";
 // import App06 from "./06StylingReactComponents/App";
 // import App07 from "./07Debugging/App";
 // import App08 from "./08Ref'sAndProtals/App";
-import App09 from "./09Practice Project/App";
+// import App09 from "./09Practice Project/App";
+import App10 from "./10Advanced State Management with Context & useReducer/App";
 
 // import FormApp from "./ReactForms/App";
 
@@ -30,7 +31,10 @@ function App() {
       {/* ref's and protals */}
       {/* <App08 /> */}
 
-      <App09 />
+      {/* Practice Project */}
+      {/* <App09 /> */}
+
+      <App10 />
 
       {/* <FormApp /> */}
     </>

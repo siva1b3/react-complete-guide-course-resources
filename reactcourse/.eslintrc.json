@@ -17,6 +17,7 @@
     "react/prop-types": "off",
     "no-console": "off",
     "comma-dangle": "off",
-    "function-paren-newline": "off"
+    "function-paren-newline": "off",
+    "object-curly-newline": "off"
   }
 }

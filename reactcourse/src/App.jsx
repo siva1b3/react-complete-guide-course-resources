@@ -34,6 +34,7 @@ function App() {
       {/* Practice Project */}
       {/* <App09 /> */}
 
+      {/* Context API */}
       <App10 />
 
       {/* <FormApp /> */}

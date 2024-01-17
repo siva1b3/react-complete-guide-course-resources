@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/jsx-curly-newline */
 /* eslint-disable implicit-arrow-linebreak */
 /* eslint-disable no-shadow */
@@ -5,6 +6,7 @@ import React, { useState } from "react";
 
 import Header from "./components/Header";
 import Shop from "./components/Shop";
+import Product from "./components/Product";
 import DUMMY_PRODUCTS from "./dummy-products";
 import "./index.css";
 
@@ -77,7 +79,16 @@ function App() {
           handleUpdateCartItemQuantity(productId, amount)
         }
       />
-      <Shop onAddItemToCart={(id) => handleAddItemToCart(id)} />
+      <Shop>
+        {DUMMY_PRODUCTS.map((product) => (
+          <li key={product.id}>
+            <Product
+              {...product}
+              onAddToCart={(id) => handleAddItemToCart(id)}
+            />
+          </li>
+        ))}
+      </Shop>
     </>
   );
 }

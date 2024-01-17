@@ -1,0 +1,49 @@
+.projectSideBar {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  outline: 1px solid green;
+}
+
+.projectSideBar h2 {
+  padding: 3px;
+  text-align: center;
+}
+
+.projectSideBar button {
+  padding: 5px;
+  width: 100%;
+  text-transform: capitalize;
+  font-size: larger;
+  font-weight: bold;
+  outline: 1px solid green;
+  transition: transform 0.25s ease, background-color 0.25s ease,
+    box-shadow 0.25s ease, border-radius 0.25s ease, opacity 0.25s ease; /* Adding transitions for all effects */
+}
+
+.projectSideBar button:hover {
+  transform: scale(1.01); /* Scale effect on hover */
+  background-color: #4caf50; /* Change the color on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Box shadow on hover */
+  border-radius: 10px; /* Change border radius on hover */
+  opacity: 0.8; /* Reduce opacity on hover */
+  color: white; /* Optional: Change text color for better visibility on the new background */
+}
+
+.projectSideBar button:active {
+  transform: scale(0.9); /* Slightly scale down when the button is clicked */
+  box-shadow: none; /* Remove box shadow on click */
+  outline: 1px solid lightblue;
+}
+
+.projectSideBar button:focus {
+  outline: 2px solid blue; /* Add a blue outline when the button is focused */
+}
+
+.projectSideBar button:disabled {
+  opacity: 0.5; /* Reduce opacity for disabled state */
+  cursor: not-allowed; /* Change cursor to not-allowed for disabled state */
+  background-color: #ccc; /* Change background color for better visual indication of disabled state */
+  color: #888; /* Adjust text color for better visibility in the disabled state */
+  border: 1px solid #ccc; /* Add a border to visually separate the disabled button */
+}

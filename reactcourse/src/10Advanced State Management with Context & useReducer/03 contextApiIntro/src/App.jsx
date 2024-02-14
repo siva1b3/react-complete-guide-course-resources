@@ -2,12 +2,14 @@
 /* eslint-disable react/jsx-curly-newline */
 /* eslint-disable implicit-arrow-linebreak */
 /* eslint-disable no-shadow */
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 
 import Header from "./components/Header";
 import Shop from "./components/Shop";
 import Product from "./components/Product";
 import DUMMY_PRODUCTS from "./dummy-products";
+import { CartContext } from "./strore/ShoppingCartContext";
+
 import "./index.css";
 
 function App() {
@@ -71,8 +73,14 @@ function App() {
     });
   }
 
+  const memoizedContextValue = useMemo(
+    () => ({ items: shoppingCart.items, onAddToCart: handleAddItemToCart }),
+    [shoppingCart, handleAddItemToCart]
+  );
+  console.log(memoizedContextValue);
+
   return (
-    <>
+    <CartContext.Provider value={memoizedContextValue}>
       <Header
         cart={shoppingCart}
         onUpdateCartItemQuantity={(productId, amount) =>
@@ -82,14 +90,11 @@ function App() {
       <Shop>
         {DUMMY_PRODUCTS.map((product) => (
           <li key={product.id}>
-            <Product
-              {...product}
-              onAddToCart={(id) => handleAddItemToCart(id)}
-            />
+            <Product {...product} />
           </li>
         ))}
       </Shop>
-    </>
+    </CartContext.Provider>
   );
 }
 

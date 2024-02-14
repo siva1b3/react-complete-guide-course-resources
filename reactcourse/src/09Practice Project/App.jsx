@@ -4,8 +4,8 @@ import React from "react";
 // import App03 from "./03 AfterAddProjectAnd CancelButtonDeveloped/App";
 // import App04 from "./04 AfterSavinvgProjectNameToList/App";
 // import App05 from "./05 afterAllBasicFunctionsComplted/App";
-// import App06 from "./06 NeedTodoStyling/App";
-import App07 from "./07 AsperUdemyVideo Project Start/App";
+import App06 from "./06 NeedTodoStyling/App";
+// import App07 from "./07 AsperUdemyVideo Project Start/App";
 
 function App() {
   return (
@@ -26,9 +26,9 @@ function App() {
       {/* <App05 /> */}
 
       {/*  */}
-      {/* <App06 /> */}
+      <App06 />
 
-      <App07 />
+      {/* <App07 /> */}
     </>
   );
 }

@@ -1,0 +1,29 @@
+/* Extra Extra Large Screens (≥1400px) - xxl */
+@media (min-width: 1400px) {
+  /* Your styles for extra extra large screens go here */
+}
+
+/* Large Screens (≤1400px) */
+@media (max-width: 1400px) {
+  /* Your styles for large screens go here */
+}
+
+/* Medium Screens (≤1200px) */
+@media (max-width: 1200px) {
+  /* Your styles for medium screens go here */
+}
+
+/* Small Screens (≤992px) */
+@media (max-width: 992px) {
+  /* Your styles for small screens go here */
+}
+
+/* Tablet Screens (≤768px) */
+@media (max-width: 768px) {
+  /* Your styles for tablet screens go here */
+}
+
+/* Mobile Screens (≤576px) */
+@media (max-width: 576px) {
+  /* Your styles for mobile screens go here */
+}

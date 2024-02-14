@@ -1,7 +1,9 @@
 /* eslint-disable react/jsx-one-expression-per-line */
-import React from "react";
+import React, { useContext } from "react";
+import { CartContext } from "../strore/ShoppingCartContext";
 
-function Cart({ items, onUpdateItemQuantity }) {
+function Cart({ onUpdateItemQuantity }) {
+  const { items } = useContext(CartContext);
   const totalPrice = items.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0

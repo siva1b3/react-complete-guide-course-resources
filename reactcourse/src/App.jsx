@@ -6,8 +6,9 @@ import React from "react";
 // import App07 from "./07Debugging/App";
 // import App08 from "./08Ref'sAndProtals/App";
 // import App09 from "./09Practice Project/App";
-import App10 from "./10Advanced State Management with Context & useReducer/App";
+// import App10 from "./10Advanced State Management with Context & useReducer/App";
 
+import FormExecrsise from "./FormsExcersise/App";
 // import FormApp from "./ReactForms/App";
 
 function App() {
@@ -35,7 +36,9 @@ function App() {
       {/* <App09 /> */}
 
       {/* Context API */}
-      <App10 />
+      {/* <App10 /> */}
+
+      <FormExecrsise />
 
       {/* <FormApp /> */}
     </>

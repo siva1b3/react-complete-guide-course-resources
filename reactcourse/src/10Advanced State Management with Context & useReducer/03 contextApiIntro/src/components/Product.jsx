@@ -1,7 +1,9 @@
 /* eslint-disable react/jsx-one-expression-per-line */
-import React from "react";
+import React, { useContext } from "react";
+import { CartContext } from "../strore/ShoppingCartContext";
 
-function Product({ id, image, title, price, description, onAddToCart }) {
+function Product({ id, image, title, price, description }) {
+  const { onAddToCart } = useContext(CartContext);
   return (
     <article className="product">
       <img src={image} alt={title} />
